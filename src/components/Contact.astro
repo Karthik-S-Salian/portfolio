@@ -10,25 +10,9 @@ import { SendIcon } from "@lucide/astro";
     <div class="space-y-4">
         <strong class="text-4xl ">Interested in working together?</strong>
         <button
-            class="mt-4 px-8 py-4 rounded-full font-semibold hover:scale-105 transition-all cursor-pointer text-xl flex gap-2"
+            class="mt-4 px-8 py-4 fancy-button text-xl flex gap-2"
             ><span>Contact me</span> <SendIcon/>
         </button>
     </div>
     <Image src={ContactImage} alt="Racoon waving" />
 </section>
-
-<style>
-    button {
-        background-color: pink;
-        color: var(--background);
-        box-shadow: 4px 4px pink;
-        border: 3px solid white;
-        transition: all 0.5s ease;
-    }
-
-    button:hover {
-        background-color: white;
-        color: black;
-        box-shadow: 3px 3px 20px white;
-    }
-</style>

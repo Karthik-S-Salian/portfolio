@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import HeroImage from "../assets/hero.webp";
+import ResumeLink from "./ResumeLink.astro";
 ---
 
 <section
@@ -12,26 +13,11 @@ import HeroImage from "../assets/hero.webp";
             >Hi, 👋 I'm Karthik S Salian. A web developer and Linux enthusiast</span
         >
 
-        <button class="mt-4 px-4 py-2 rounded-3xl font-semibold hover:scale-105 transition-all cursor-pointer">View Resume </button>
+        <button
+            class="fancy-button mt-4 px-4 py-2 block"
+            ><ResumeLink>View Resume</ResumeLink>
+        </button>
     </div>
 
     <Image src={HeroImage} alt="Racoon waving" />
 </section>
-
-
-<style>
-    button{
-        background-color: pink;
-        color: var(--background);
-        display: block;
-        box-shadow: 4px 4px pink;
-        border:3px solid white;
-        transition: all 0.5s ease;
-    }
-
-    button:hover{
-        background-color: white;
-        color: black;
-        box-shadow: 3px 3px 20px white;
-    }
-</style>

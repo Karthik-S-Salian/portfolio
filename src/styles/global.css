@@ -57,3 +57,18 @@ li {
     text-decoration: var(--background-light) wavy underline;
     @apply text-4xl mb-8 font-semibold;
 }
+
+.fancy-button {
+    background-color: pink;
+    color: var(--background);
+    box-shadow: 4px 4px pink;
+    border: 3px solid white;
+    transition: all 0.5s ease;
+    @apply rounded-full font-semibold hover:scale-105 transition-all cursor-pointer;
+}
+
+.fancy-button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 3px 3px 20px white;
+}
