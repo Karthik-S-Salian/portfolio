@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import HeroImage from "../assets/hero.webp";
+import HeroImage from "../assets/hi.gif";
 import ResumeLink from "./ResumeLink.astro";
 ---
 
 <section
-    class="container grid grid-cols-2 place-content-center mt-24 mx-auto place-items-center p-4 min-h-[75vh]"
+    class="container grid grid-cols-1 sm:grid-cols-2 place-content-center mt-24 mx-auto place-items-center p-4 min-h-[75vh]"
 >
     <div class="space-y-4">
         <h3 class="text-5xl">Hello there</h3>
@@ -19,5 +19,5 @@ import ResumeLink from "./ResumeLink.astro";
         </button>
     </div>
 
-    <Image src={HeroImage} alt="Racoon waving" />
+    <Image src={HeroImage} alt="Racoon waving" class="max-w-[60%]" />
 </section>

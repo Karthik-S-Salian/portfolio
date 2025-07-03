@@ -48,7 +48,7 @@ const floatingImages = techImages.map((img, i) => {
         ...img,
         top: `${Math.min(Math.max(y, 0), 100)}`,
         left: `${Math.min(Math.max(x, 0), 100)}`,
-        size: 48,
+        animationDelay: `${Math.random() * 4}s`,
     };
 });
 ---
@@ -72,29 +72,27 @@ const floatingImages = techImages.map((img, i) => {
 <section class="container mx-auto">
     <h3 class="section-heading">Skills</h3>
 
-    <div class="w-full h-[70vh] relative">
+    <div class="w-full h-[70vh] relative grid place-content-center">
         <div class="blob-bg"></div>
 
-        <!-- Floating images -->
         {
             floatingImages.map((img, i) => (
                 <Image
                     src={img.src}
-                    class="floating"
-                    style={`top: ${img.top}%; left: ${img.left}%; width: ${img.size || 40}px`}
+                    class="floating aspect-square w-8 md:w-10 lg:w-12"
+                    style={`top: ${img.top}%; left: ${img.left}%; animation-delay:${img.animationDelay || 0}`}
                     alt="float"
                 />
             ))
         }
 
-        <!-- Stars -->
         {
             Array.from({ length: 30 }).map((_, i) => {
                 const top = Math.random() * 100;
                 const left = Math.random() * 100;
                 const size = Math.random() * 3 + 2;
-                const color = Math.random() > 0.5 ? "#fff" : "#ffccdd";
-                const style = `top: ${top}%; left: ${left}%; width: ${size}px; height: ${size}px; background-color: ${color}`;
+                const color = Math.random() > 0.5 ? "#fff" : "#FFFFaa";
+                const style = `top: ${top}%; left: ${left}%; width: ${size}px; height: ${size}px; background-color: ${color}; animation-delay:${Math.round(Math.random() * 500)}ms; animation-duration:${Math.round(1000 + Math.random() * 2000)}ms ;`;
                 return <div class="star" style={style} />;
             })
         }
@@ -117,20 +115,30 @@ const floatingImages = techImages.map((img, i) => {
         /* mask-image: radial-gradient(circle, black 60%, transparent 100%); */
     }
 
-    .floating {
-        position: absolute;
-        animation: float 3s ease-in-out infinite;
-        z-index: 0;
-    }
-
-    @keyframes float {
-        0%,
+    @keyframes float-robotic {
+        0% {
+            transform: translate(0, 0);
+        }
+        20% {
+            transform: translate(4px, -4px);
+        }
+        40% {
+            transform: translate(-3px, 1px);
+        }
+        60% {
+            transform: translate(1px, 1px);
+        }
+        80% {
+            transform: translate(-1px, -1px);
+        }
         100% {
             transform: translate(0, 0);
         }
-        50% {
-            transform: translate(-10px, -10px);
-        }
+    }
+
+    .floating {
+        position: absolute;
+        animation: float-robotic 6s ease-in-out infinite;
     }
 
     .star {
@@ -138,6 +146,7 @@ const floatingImages = techImages.map((img, i) => {
         border-radius: 50%;
         animation: flicker 2s infinite ease-in-out;
         z-index: 0;
+        animation-duration: 750ms;
     }
 
     @keyframes flicker {
@@ -151,12 +160,19 @@ const floatingImages = techImages.map((img, i) => {
     }
 
     .raccoon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
         width: 120px;
-        transform: translate(-50%, -50%);
         z-index: 2;
+        animation: raccoon-float 2s ease-in-out infinite;
+    }
+
+    @keyframes raccoon-float {
+        0%,
+        100% {
+            transform: translate(5px, 5px);
+        }
+        50% {
+            transform: translate(-5px, -5px);
+        }
     }
 
     @keyframes morph {

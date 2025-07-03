@@ -3,16 +3,32 @@ import ContactLinks from "./ContactLinks.astro";
 ---
 
 <header
-    class="flex items-center justify-between px-6 py-4 rounded-lg bg-black/30 backdrop-blur-sm w-full container -translate-x-1/2 left-1/2 top-4 fixed z-50"
+    class="hidden sm:flex items-center justify-between px-6 py-4 rounded-lg bg-black/30 backdrop-blur-sm w-full container -translate-x-1/2 left-1/2 top-4 fixed z-50"
 >
     <h1 class="text-xl font-bold"><a href="/">Karthik S Salian</a></h1>
 
     <nav class="space-x-4">
-        <a href="">About</a>
-        <a href="">Projects</a>
-        <a href="">Blogs</a>
+        <a href="#about" class="scroll-link">About</a>
+        <a href="#projects" class="scroll-link">Projects</a>
+        <a href="" class="scroll-link">Blogs</a>
     </nav>
 
-    <ContactLinks/>
-    
+    <ContactLinks />
 </header>
+
+<script is:inline>
+    document.querySelectorAll(".scroll-link").forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute("href"));
+            if (target) {
+                const yOffset = -120;
+                const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                window.scrollTo({ top: y, behavior: "smooth" });
+            }
+        });
+    });
+</script>

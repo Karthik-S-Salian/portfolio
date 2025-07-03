@@ -17,6 +17,7 @@
 html {
     background-color: var(--background);
     color: var(--text);
+    scroll-behavior: smooth;
 }
 
 h1,
