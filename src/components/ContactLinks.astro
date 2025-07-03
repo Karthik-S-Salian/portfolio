@@ -1,0 +1,28 @@
+---
+import {
+    Instagram,
+    Github,
+    Twitter,
+    Linkedin,
+    Mail,
+    FileUser,
+} from "@lucide/astro";
+
+const contacts = {
+    email: "mailto:karthikssalian5@gmail.com",
+    linkedin: "https://www.linkedin.com/in/karthik-s-salian/",
+    instagram: "https://www.instagram.com/karthik_s_.salian/",
+    twitter: "https://x.com/karthikSSalian",
+    github: "https://github.com/Karthik-S-Salian",
+    resume: "",
+};
+---
+
+<div class="flex items-center justify-center gap-4">
+    <a target="_blank" href={contacts.resume}><FileUser /></a>
+    <a target="_blank" href={contacts.github}><Github /></a>
+    <a target="_blank" href={contacts.linkedin}><Linkedin /></a>
+    <a target="_blank" href={contacts.instagram}><Instagram /></a>
+    <a target="_blank" href={contacts.twitter}><Twitter /></a>
+    <a target="_blank" href={contacts.email}><Mail /></a>
+</div>

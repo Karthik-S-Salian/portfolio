@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import HeroImage from "../assets/hero.webp";
+---
+
+<section
+    class="container grid grid-cols-2 place-content-center mt-24 mx-auto place-items-center p-4 min-h-[75vh]"
+>
+    <div class="space-y-4">
+        <h3 class="text-5xl">Hello there</h3>
+        <span class="text-2xl"
+            >Hi, 👋 I'm Karthik S Salian. A web developer and Linux enthusiast</span
+        >
+
+        <button class="mt-4 px-4 py-2 rounded-3xl font-semibold hover:scale-105 transition-all cursor-pointer">View Resume </button>
+    </div>
+
+    <Image src={HeroImage} alt="Racoon waving" />
+</section>
+
+
+<style>
+    button{
+        background-color: pink;
+        color: var(--background);
+        display: block;
+        box-shadow: 4px 4px pink;
+        border:3px solid white;
+        transition: all 0.5s ease;
+    }
+
+    button:hover{
+        background-color: white;
+        color: black;
+        box-shadow: 3px 3px 20px white;
+    }
+</style>

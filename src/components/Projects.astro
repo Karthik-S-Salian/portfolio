@@ -1,0 +1,220 @@
+---
+import { ExternalLink, Github } from "@lucide/astro";
+
+const projects = [
+    {
+        title: "Title",
+    },
+];
+---
+
+<section class="container mx-auto">
+    <h3 class="section-heading">Projects</h3>
+    <div class="space-y-10">
+        <div class="project-container">
+            <h4 class="project-heading">Kvdhama Website</h4>
+            <div class="tag-container">
+                <span class="tag-special">internship</span>
+                <span class="tag">Nextjs</span>
+                <span class="tag">React</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">Sanity</span>
+            </div>
+            <p>
+                Informational website for Ashraya Dhama, supporting English and
+                Kannada with an integrated admin dashboard that allows for easy
+                management of dynamic content, including text, images, videos,
+                and links.
+            </p>
+
+            <div class="tag-container">
+                <a href="" class="bottom-tag">github <Github size={16} /></a>
+                <a href="https://www.kvdhama.com/" class="bottom-tag"
+                    >Website <ExternalLink size={16} /></a
+                >
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h4 class="project-heading">Find me - Face Search System</h4>
+            <div class="tag-container">
+                <span class="tag-special">Ongoing</span>
+                <span class="tag">Rust</span>
+                <span class="tag">Poem-openapi</span>
+                <span class="tag">Pytorch</span>
+                <span class="tag">Onnx</span>
+                <span class="tag">Qdrant</span>
+            </div>
+            <p>
+                A real-time face recognition system built in Rust, leveraging
+                ONNX Runtime for deep learning inference and Qdrant for fast
+                vector similarity search. The backend APIs were developed using
+                Poem.rs and provide endpoints for embedding, storing, and
+                querying facial images. Optimized to support known and unknown
+                face lookups with efficient memory and compute usage, making it
+                suitable for both desktop and edge devices.
+            </p>
+
+            <div class="tag-container">
+                <a
+                    href="https://github.com/Karthik-S-Salian/find-me"
+                    class="bottom-tag">github <Github size={16} /></a
+                >
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h4 class="project-heading">
+                Executor - Online Code Execution System
+            </h4>
+            <div class="tag-container">
+                <span class="tag-special">Ongoing</span>
+                <span class="tag">Rust</span>
+                <span class="tag">Poem-openapi</span>
+                <span class="tag">Docker</span>
+                <span class="tag">isolate</span>
+                <span class="tag">Nats</span>
+            </div>
+            <p>
+                A secure, containerized code execution engine supporting
+                multiple programming languages. Written in Rust with
+                Poem-openapi, the system uses the Linux isolate sandbox for
+                resource-limited execution and Docker containers to run
+                untrusted code securely. NATS serves as the lightweight
+                messaging system handling job dispatch and results. Ideal for
+                building Judge0-style code execution backends for coding
+                platforms.
+            </p>
+
+            <div class="tag-container">
+                <a
+                    href="https://github.com/Karthik-S-Salian/executor"
+                    class="bottom-tag">github <Github size={16} /></a
+                >
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h4 class="project-heading">Capture Incridea</h4>
+            <div class="tag-container">
+                <span class="tag-special">For college fest</span>
+                <span class="tag">Nextjs</span>
+                <span class="tag">Prisma</span>
+                <span class="tag">Trpc</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Tailwind CSS</span>
+            </div>
+            <p>
+                Capture Incridea is a photography management platform designed
+                for NMAMIT’s Incridea fest. It handles high-traffic user
+                sessions and dynamic image access for over 5000 users. Built
+                with Next.js and tRPC for seamless full-stack communication, it
+                offers intuitive image browsing, upload moderation, and
+                searchability. Backend scalability is handled using Prisma and
+                PostgreSQL, ensuring smooth performance under heavy load.
+            </p>
+
+            <div class="tag-container">
+                <a href="" class="bottom-tag">github <Github size={16} /></a>
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h4 class="project-heading">
+                ACE Website — Association of Computer Engineers
+            </h4>
+            <div class="tag-container">
+                <span class="tag-special">internship</span>
+                <span class="tag">Astrojs</span>
+                <span class="tag">Drizzle</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Turso</span>
+            </div>
+            <p>
+                An official departmental website for the Association of Computer
+                Engineers. Features include blog publishing, event creation, and
+                paperless registration. The site is built with Astro for fast
+                performance and uses Drizzle ORM with Turso to provide a
+                lightweight and scalable backend. Designed for both desktop and
+                mobile viewing with a clean, accessible interface.
+            </p>
+
+            <div class="tag-container">
+                <a
+                    href="https://github.com/ACE-NMAMIT/ace-website"
+                    class="bottom-tag">github <Github size={16} /></a
+                >
+                <a href="https://acenmamit.vercel.app/" class="bottom-tag"
+                    >Website <ExternalLink size={16} /></a
+                >
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h4 class="project-heading">
+                Dotfiles & NixOS Desktop Configuration [I used to use NixOS btw]
+            </h4>
+            <div class="tag-container">
+                <span class="tag-special">Must Visit</span>
+                <span class="tag">Nix</span>
+                <span class="tag">NixOS</span>
+                <span class="tag">Hyprland</span>
+                <span class="tag">zsh</span>
+                <span class="tag">Home manager</span>
+            </div>
+            <p>
+                A modular and reproducible desktop environment setup using Nix
+                and Home Manager. Focused on minimalism and efficiency, it
+                features a fully themed Hyprland Wayland compositor, and Zsh
+                shell with plugins. The configuration is designed to work across
+                machines and offers versioned system upgrades via Nix flakes.
+            </p>
+
+            <div class="tag-container">
+                <a
+                    href="https://github.com/Karthik-S-Salian/dotfiles"
+                    class="bottom-tag">github <Github size={16} /></a
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @reference "tailwindcss";
+
+    .project-heading {
+        @apply text-2xl font-semibold;
+    }
+
+    .tag-special {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        /* border: 2px solid rgb(255, 74, 164);*/
+        @apply border px-3 rounded-full text-sm;
+        background-color: pink;
+        color: black;
+        border: 1px solid rgb(255, 74, 164);
+    }
+
+    .tag {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border: 2px solid rgb(255, 74, 164);
+        @apply border px-3 rounded-full text-sm;
+        background-color: rgba(255, 74, 164, 0.3);
+        color: white;
+    }
+
+    .project-container {
+        @apply space-y-3;
+    }
+
+    .bottom-tag {
+        @apply flex gap-2 items-center border-b border-white w-fit;
+    }
+
+    .tag-container {
+        @apply flex gap-4 flex-wrap;
+    }
+</style>

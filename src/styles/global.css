@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Global styles */
+:root {
+    --background: #1e1e2e;
+    --background-light: #ffb8d9;
+    --button: #78c2ad;
+    --text: #eff1f5;
+    --text-light: #1e1e2e;
+    --text-link: #78c2ad;
+    --text-link-light: #375a7f;
+    --underline: #375a7f;
+    --header: 'Pacifico', cursive;
+    --body: 'Josefin Sans', sans-serif;
+}
+
+html {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+h1,
+h2,
+h3,
+.font-heading {
+    font-family: var(--header);
+    /* font-weight: normal; */
+}
+
+body {
+    width: 100vw;
+    max-width: 100%;
+    min-height: 100vh;
+
+}
+
+
+p {
+    font-family: var(--body);
+    font-size: 1.2rem;
+    hyphens: auto;
+    line-height: 1.5;
+    text-indent: 2rem;
+}
+
+small,
+li {
+    font-family: var(--body);
+}
+
+
+/* section{
+    min-height: 100vh;
+} */
+
+.section-heading {
+    text-decoration: var(--background-light) wavy underline;
+    @apply text-4xl mb-8 font-semibold;
+}
