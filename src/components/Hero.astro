@@ -2,22 +2,35 @@
 import { Image } from "astro:assets";
 import HeroImage from "../assets/hi.gif";
 import ResumeLink from "./ResumeLink.astro";
+import ContactLinks from "./ContactLinks.astro";
 ---
 
 <section
-    class="container grid grid-cols-1 sm:grid-cols-2 place-content-center mt-24 mx-auto place-items-center p-4 min-h-[75vh]"
+    class="container grid grid-cols-1 sm:grid-cols-2 gap-6 place-content-center mt-12 sm:mt-24 mx-auto place-items-center p-4 min-h-[75vh] hero"
 >
-    <div class="space-y-4">
+    <div class="flex flex-col gap-6">
         <h3 class="text-5xl">Hello there</h3>
-        <span class="text-2xl"
-            >Hi, 👋 I'm Karthik S Salian. A web developer and Linux enthusiast</span
-        >
+        <div class="text-2xl">
+            Hi, 👋 I'm Karthik S Salian. A web developer and Linux enthusiast
+        </div>
 
-        <button
-            class="fancy-button mt-4 px-4 py-2 block"
+        <ContactLinks />
+
+        <button class="fancy-button mt-2 px-4 py-2 block sm:w-fit"
             ><ResumeLink>View Resume</ResumeLink>
         </button>
     </div>
 
     <Image src={HeroImage} alt="Racoon waving" class="max-w-[60%]" />
 </section>
+
+<style is:global>
+    @reference "tailwindcss";
+    .hero .contact-link-container {
+        @apply gap-6 flex-wrap
+     }
+
+    .hero .contact-link-container>a {
+        @apply p-4 rounded-lg bg-black/20 backdrop-blur-xl border border-white/10
+    }
+</style>
