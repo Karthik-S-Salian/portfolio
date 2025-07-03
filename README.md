@@ -1,48 +1,57 @@
-# Astro Starter Kit: Basics
+# 🧑‍💻 Karthik S Salian — Portfolio Website
 
-```sh
-bun create astro@latest -- --template basics
+This is the source code for my personal portfolio website, where I showcase my projects, skills, experience, and more. Built with performance and simplicity in mind, it's fully responsive and easy to maintain.
+
+---
+
+## 🚀 Features
+
+- 🌐 **Project Showcase** with live links and source code
+- 📄 **Resume section** with downloadable CV
+- 📬 **Contact section** with social links
+- 🌓 **Dark mode** support (if implemented)
+- 💻 Built with **Astro**, **TypeScript**, and **Tailwind CSS**
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Astro, TypeScript, Tailwind CSS
+- **Icons & Fonts**: Lucide, Google Fonts
+- **Assets**: https://giphy.com/644kr
+- **Hosting**: Vercel
+
+---
+
+## 🧑‍🎨 Customizing
+
+1. Update `src/content/projects.ts` (or .json) with your latest work.
+2. Add new routes/pages under `src/pages`.
+3. Replace social links and contact info in the layout or config files.
+4. Update favicon and profile image in the `public/` directory.
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/Karthik-S-Salian/portfolio
+cd portfolio
+bun install
+bun run dev
 ```
+---
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🧾 License
+This project is open source under the MIT License.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📬 Contact
+Feel free to reach out via:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+🌐 Website: https://karthik-s-salian.vercel.app
 
-## 🚀 Project Structure
+📧 Email: karthikssalian5@gmail.com
 
-Inside of your Astro project, you'll see the following folders and files:
+🧑‍💼 LinkedIn: https://linkedin.com/in/karthik-s-salian
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+💻 GitHub: https://github.com/Karthik-S-Salian
