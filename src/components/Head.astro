@@ -5,22 +5,26 @@ interface Props {
   image?: string;
 }
 
-// const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const canonicalURL = ""
+const site = Astro.site;
+if (!Astro.site) {
+  throw new Error(
+    "Astro.site is not defined. Please set the 'site' field in astro.config.mjs.",
+  );
+}
 
-const { title, description, image = "/favicon.png" } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, site).toString();
+const { title, description, image = "/favicon.svg" } = Astro.props;
+const imageURL = new URL(image, site).toString();
+const twitterDomain = new URL(site!).hostname;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg" href="/favicon.svg" />
+<link rel="icon" type="image/svg" href={image} />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<!-- <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
-<link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin /> -->
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -41,24 +45,18 @@ const { title, description, image = "/favicon.png" } = Astro.props;
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
-<!-- Open Graph  -->
+<!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://acenmamit.vercel.app" />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta
-  property="og:image"
-  content="https://acenmamit.vercel.app/android-chrome-192x192.png"
-/>
-<meta property="og:logo" content="https://acenmamit.vercel.app/favicon.png" />
+<meta property="og:image" content={imageURL} />
+<meta property="og:logo" content={imageURL} />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:domain" content="acenmamit.vercel.app" />
-<meta property="twitter:url" content="https://acenmamit.vercel.app/" />
+<meta property="twitter:domain" content={twitterDomain} />
+<meta property="twitter:url" content={canonicalURL} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta
-  name="twitter:image"
-  content="https://acenmamit.vercel.app/android-chrome-192x192.png"
-/>
+<meta name="twitter:image" content={imageURL} />
