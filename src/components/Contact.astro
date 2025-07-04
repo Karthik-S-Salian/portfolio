@@ -8,11 +8,12 @@ import { SendIcon } from "@lucide/astro";
     class="container grid grid-cols-1 sm:grid-cols-2 place-content-center place-items-center mx-auto gap-8"
 >
     <div class="space-y-4">
-        <strong class="text-4xl ">Interested in working together?</strong>
-        <button
-            class="mt-4 px-8 py-4 fancy-button text-xl flex  gap-2"
-            ><span>Contact me</span> <SendIcon/>
-        </button>
+        <strong class="text-4xl">Interested in working together?</strong>
+        <a
+            href="mailto:karthikssalian5@gmail.com"
+            class="mt-8 sm:mt-4 px-8 py-4 fancy-button text-xl flex gap-2 w-full sm:w-fit justify-center"
+            ><span>Contact me</span> <SendIcon />
+        </a>
     </div>
     <Image src={ContactImage} alt="Racoon waving" />
 </section>
