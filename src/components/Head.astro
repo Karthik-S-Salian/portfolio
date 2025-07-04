@@ -3,6 +3,7 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  ogimage?:string
 }
 
 const site = Astro.site;
@@ -13,8 +14,8 @@ if (!Astro.site) {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, site).toString();
-const { title, description, image = "/favicon.svg" } = Astro.props;
-const imageURL = new URL(image, site).toString();
+const { title, description, image = "/favicon.svg",ogimage = image } = Astro.props;
+const imageURL = new URL(ogimage, site).toString();
 const twitterDomain = new URL(site!).hostname;
 ---
 
