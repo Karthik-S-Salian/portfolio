@@ -1,0 +1,71 @@
+---
+import Github from "@lucide/astro/icons/github";
+---
+
+<section class="container mx-auto">
+    <h3 class="section-heading">Experience</h3>
+    <div class="project-container">
+        <h4 class="project-heading">HPE CPP Intern | Jan 2025 - Present</h4>
+        <div class="tag-container">
+            <span class="tag-special">Ongoing</span>
+            <span class="tag">Python</span>
+            <span class="tag">Fluent Bit</span>
+            <span class="tag">Kafka</span>
+            <span class="tag">Logstash</span>
+            <span class="tag">VictoriaLogs</span>
+            <span class="tag">Loki</span>
+        </div>
+        <p>
+            Exploring observability solutions and OpenSearch alternatives
+            including Loki, VictoriaLogs as part of the HPCM log- ging pipeline.
+            Evaluating integration strategies using Fluent Bit, Kafka, Logstash,
+            and OpenTelemetry for traceability and monitoring.
+        </p>
+
+        <div class="tag-container">
+            <a
+                href="https://github.com/Karthik-S-Salian/hpe-cty-opentelemetry"
+                class="bottom-tag" target="_blank">github <Github size={16} /></a
+            >
+        </div>
+    </div>
+</section>
+
+<style>
+    @reference "tailwindcss";
+
+    .project-heading {
+        @apply text-2xl font-semibold;
+    }
+
+    .tag-special {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        /* border: 2px solid rgb(255, 74, 164);*/
+        @apply border px-3 rounded-full text-sm;
+        background-color: pink;
+        color: black;
+        border: 1px solid rgb(255, 74, 164);
+    }
+
+    .tag {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border: 2px solid rgb(255, 74, 164);
+        @apply border px-3 rounded-full text-sm;
+        background-color: rgba(255, 74, 164, 0.3);
+        color: white;
+    }
+
+    .project-container {
+        @apply space-y-3;
+    }
+
+    .bottom-tag {
+        @apply flex gap-2 items-center border-b border-white w-fit;
+    }
+
+    .tag-container {
+        @apply flex gap-4 flex-wrap;
+    }
+</style>

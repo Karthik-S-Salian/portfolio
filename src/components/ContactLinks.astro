@@ -8,6 +8,9 @@ import {
     FileUser,
 } from "@lucide/astro";
 
+import KaggleImage from "../assets/kaggle.svg"
+import { Image } from "astro:assets";
+
 const contacts = {
     email: "mailto:karthikssalian5@gmail.com",
     linkedin: "https://www.linkedin.com/in/karthik-s-salian/",
@@ -15,14 +18,17 @@ const contacts = {
     twitter: "https://x.com/karthikSSalian",
     github: "https://github.com/Karthik-S-Salian",
     resume: "/resume.pdf",
+    kaggle:"https://www.kaggle.com/karthikssalian",
+    stackoverflow:"https://stackoverflow.com/users/20365439/karthik-s-salian"
 };
 ---
 
-<div class="flex items-center gap-4 contact-link-container">
+<div class="flex items-center md:gap-4 gap-2 contact-link-container">
     <a target="_blank" href={contacts.resume}><FileUser /></a>
     <a target="_blank" href={contacts.github}><Github /></a>
     <a target="_blank" href={contacts.linkedin}><Linkedin /></a>
     <a target="_blank" href={contacts.instagram}><Instagram /></a>
     <a target="_blank" href={contacts.twitter}><Twitter /></a>
     <a target="_blank" href={contacts.email}><Mail /></a>
+    <a target="_blank"  href={contacts.kaggle}><Image src={KaggleImage} alt="kaggle" class="w-4 aspect-square kaggle"/></a>
 </div>
