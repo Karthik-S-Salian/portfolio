@@ -9,7 +9,6 @@ This is the source code for my personal portfolio website, where I showcase my p
 - 🌐 **Project Showcase** with live links and source code
 - 📄 **Resume section** with downloadable CV
 - 📬 **Contact section** with social links
-- 🌓 **Dark mode** support (if implemented)
 - 💻 Built with **Astro**, **TypeScript**, and **Tailwind CSS**
 
 ---
@@ -20,15 +19,6 @@ This is the source code for my personal portfolio website, where I showcase my p
 - **Icons & Fonts**: Lucide, Google Fonts
 - **Assets**: https://giphy.com/644kr
 - **Hosting**: Vercel
-
----
-
-## 🧑‍🎨 Customizing
-
-1. Update `src/content/projects.ts` (or .json) with your latest work.
-2. Add new routes/pages under `src/pages`.
-3. Replace social links and contact info in the layout or config files.
-4. Update favicon and profile image in the `public/` directory.
 
 ---
 
