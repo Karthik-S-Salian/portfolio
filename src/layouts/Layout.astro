@@ -2,6 +2,7 @@
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
+import Analytics from '@vercel/analytics/astro'
 ---
 
 <!doctype html>
@@ -10,6 +11,7 @@ import "../styles/global.css";
 		<Head title="Karthik S Salian" description="Protfolio website" ogimage="/opengraph.png"/>
 	</head>
 	<body class="flex flex-col justify-center gap-24 px-8 relative">
+		<Analytics/>
 		<Header />
 		<slot />
 	</body>
